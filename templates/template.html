@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Static Site</title>
+    <title>{{ title | default(value="Static Site") }}</title>
 </head>
 <body>
+    <h1>{{ title }}</h1>
+    <p>{{ date }}</p>
     {{ content | safe }}
 </body>
 </html>
